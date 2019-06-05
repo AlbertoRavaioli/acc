@@ -1,0 +1,6 @@
+Salve gentile cliente,
+in seguito alla sua richiesta di una nostra consulenza riguardante l'irraggiungibilità dell'IP 104.83.145.189(akamaitechnologies.com) e l'impossibilità di comunicare con l'host 3 della sottorete 10.174.1.xx, abbiamo proceduto a una verifica delle tabella di arp e routing.
+Si è notato che nel primo caso il mancato collegamento era dovuto a una modifica della tabella Arp, in particolare il MAC adress del router riferimento non corrispondeva al MAC reale (90:6c:ac:fb:b7:b8 anziché 90:6c:ac:fb:b7:b9). Nel secondo caso invece era un reindirizzamento sbagliato della sottorete 10.174.1.xx, che comunicava con un router inesistente posizionato all'indirizzo 10.174.0.253.
+Si è proceduto quindi alla correzione e a un riposizionamento dei valori corretti all'interno della tabella.
+Si consiglia, per le prossime volte, un previo controllo delle tabella di routing (tramite il comando netstat -rn) e delle tabelle di arp (arp-a) tramite il terminale; inoltre bisogna avere coscienza che qualunque modifica può alterare la navigazione e creare disagi agli utenti. Si suggerisce per evitare manomissioni future di verificare chi è in posssesso delle credenziali di amminnastraore (root) e fornirle solo in caso di dovuta necessità.
+Cordiali saluti.
